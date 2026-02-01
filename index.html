@@ -2013,10 +2013,53 @@
                 width: 100%;
             }
 
-            /* Footer */
-            footer {
-                padding: 50px 20px 100px 20px;
+            /* Footer Centering Fix */
+            footer,
+            footer .social-icons-footer,
+            footer .dev-credit-container,
+            footer .dev-socials {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 text-align: center;
+                width: 100%;
+            }
+
+            footer .social-icons-footer,
+            footer .dev-socials {
+                flex-direction: row;
+                /* Icons in a row */
+            }
+
+            section {
+                padding: 60px 20px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Aggressive Text Centering */
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            span,
+            div,
+            a {
+                text-align: center;
+            }
+
+            /* Fix Hero Subtitle overflow */
+            .hero-subtitle {
+                font-size: 0.85rem !important;
+                line-height: 1.5;
+                max-width: 90%;
+                margin-left: auto;
+                margin-right: auto;
             }
 
             @keyframes slideUp {
