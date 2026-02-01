@@ -1498,41 +1498,93 @@
         }
 
         /* Mobile Responsive */
+        /* Mobile Responsive App Mode */
         @media (max-width: 768px) {
+            .mobile-nav {
+                display: flex;
+                animation: slideUp 0.5s ease;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(100%);
+                }
+
+                to {
+                    transform: translateY(0);
+                }
+            }
+
+            /* Adjust body for bottom nav */
+            body {
+                padding-bottom: 80px;
+            }
+
+            /* Hide Desktop Nav Links */
+            .nav-links {
+                display: none;
+            }
+
+            /* Optimize Nav for Mobile */
+            nav {
+                padding: 15px 20px;
+                justify-content: space-between;
+                background: rgba(0, 0, 0, 0.9);
+            }
+
+            .logo {
+                font-size: 0.9rem;
+            }
+
+            /* Adjust Hero for Mobile Viewport */
+            #hero {
+                padding-top: 120px;
+                min-height: 90vh;
+                /* Adjust for mobile browser bars */
+            }
+
+            .super-title {
+                font-size: 3.5rem;
+            }
+
+            /* Component resizing */
             .circuit-board {
                 max-width: 90vw;
-                height: 350px;
-                padding: 20px;
+                height: 300px;
+                padding: 15px;
             }
 
             .corner-chip {
-                width: 35px;
-                height: 35px;
-            }
-
-            .chip-label {
-                font-size: 0.5rem;
+                width: 30px;
+                height: 30px;
             }
 
             .central-processor {
-                width: 160px;
-                height: 140px;
+                width: 140px;
+                height: 120px;
             }
 
             .brand-text {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
 
             .year-text {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
 
-            .tech-label {
-                font-size: 0.6rem;
+            /* Grid Stacking */
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
-            .power-symbol {
-                font-size: 1.5rem;
+            #about-college {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            /* Footer Space for Bottom Nav */
+            footer {
+                padding-bottom: 100px;
             }
         }
 
@@ -1802,6 +1854,102 @@
         .icon-mail:hover {
             color: #ea4335;
             box-shadow: 0 0 15px rgba(234, 67, 53, 0.5);
+        }
+
+        /* MOBILE APP NAVIGATION & RESPONSIVENESS */
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(5, 5, 5, 0.95);
+            backdrop-filter: blur(15px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            justify-content: space-around;
+            padding: 12px 0 15px 0;
+            z-index: 9999;
+            padding-bottom: max(15px, env(safe-area-inset-bottom));
+        }
+
+        .mobile-nav-item {
+            color: #888;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.65rem;
+            gap: 6px;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: 0.3s;
+            width: 20%;
+        }
+
+        .mobile-nav-item i {
+            font-size: 1.3rem;
+            margin-bottom: 2px;
+        }
+
+        .mobile-nav-item:hover,
+        .mobile-nav-item.active {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .mobile-nav {
+                display: flex;
+                animation: slideUp 0.5s ease;
+            }
+
+            body {
+                padding-bottom: 80px;
+            }
+
+            .nav-links {
+                display: none !important;
+            }
+
+            nav {
+                padding: 15px 20px;
+                background: rgba(0, 0, 0, 0.9);
+            }
+
+            .logo {
+                font-size: 0.9rem;
+            }
+
+            #hero {
+                padding-top: 120px;
+            }
+
+            .super-title {
+                font-size: 3.5rem;
+            }
+
+            .circuit-board {
+                max-width: 90vw;
+                height: 300px;
+                padding: 15px;
+            }
+
+            .central-processor {
+                width: 140px;
+                height: 120px;
+            }
+
+            footer {
+                padding-bottom: 100px;
+            }
+
+            @keyframes slideUp {
+                from {
+                    transform: translateY(100%);
+                }
+
+                to {
+                    transform: translateY(0);
+                }
+            }
         }
     </style>
 
@@ -2386,6 +2534,16 @@
 
     <!-- QUERIES SECTION REMOVED (Moved to Overlay) -->
     <!-- <section id="queries"> ... </section> -->
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="mobile-nav">
+        <a href="#hero" class="mobile-nav-item"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="#technical" class="mobile-nav-item"><i class="fa-solid fa-microchip"></i><span>Events</span></a>
+        <a href="#workshop" class="mobile-nav-item"><i class="fa-solid fa-laptop-code"></i><span>Workshop</span></a>
+        <a href="#transport" class="mobile-nav-item"><i class="fa-solid fa-bus"></i><span>Transport</span></a>
+        <a href="javascript:void(0)" onclick="openQueries(event)" class="mobile-nav-item"><i
+                class="fa-solid fa-circle-question"></i><span>Queries</span></a>
+    </div>
 
     <!-- Toast -->
     <div id="toast"
