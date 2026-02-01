@@ -1920,16 +1920,26 @@
 
             #hero {
                 padding-top: 120px;
+                width: 100%;
+                overflow: hidden;
             }
 
             .super-title {
-                font-size: 3.5rem;
+                font-size: 15vw;
+                /* Responsive font size */
+            }
+
+            /* Component Resizing */
+            .massive-component {
+                transform: scale(0.8);
             }
 
             .circuit-board {
-                max-width: 90vw;
-                height: 300px;
+                max-width: 95vw;
+                height: auto;
+                min-height: 300px;
                 padding: 15px;
+                margin: 0 auto;
             }
 
             .central-processor {
@@ -1937,8 +1947,9 @@
                 height: 120px;
             }
 
+            /* Footer */
             footer {
-                padding-bottom: 100px;
+                padding: 50px 20px 100px 20px;
             }
 
             @keyframes slideUp {
