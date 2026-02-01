@@ -1973,9 +1973,50 @@
                 margin-left: 0 !important;
             }
 
+            /* Alignment Fixes - Center Everything */
+            section,
+            .about-text,
+            .card-content,
+            .hero-subtitle {
+                text-align: center !important;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .event-meta {
+                justify-content: center;
+                gap: 20px;
+                width: 100%;
+            }
+
+            p,
+            h1,
+            h2,
+            h3,
+            h4,
+            span,
+            div {
+                text-align: center;
+            }
+
+            /* Fix contact box alignment */
+            .contact-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Ensure full width for containers but center content */
+            .events-grid,
+            .about-text {
+                width: 100%;
+            }
+
             /* Footer */
             footer {
                 padding: 50px 20px 100px 20px;
+                text-align: center;
             }
 
             @keyframes slideUp {
