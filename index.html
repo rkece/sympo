@@ -1721,6 +1721,88 @@
                 opacity: 0.5;
             }
         }
+
+        /* DEVELOPER CREDIT SECTION */
+        .dev-credit-container {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+
+        .dev-label {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.75rem;
+            color: #666;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .dev-name {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            background: linear-gradient(45deg, #fff, #8b5cf6, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            text-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            padding: 5px 15px;
+        }
+
+        .dev-name:hover {
+            transform: scale(1.1);
+            text-shadow: 0 0 30px rgba(139, 92, 246, 0.8), 0 0 50px rgba(14, 165, 233, 0.6);
+            letter-spacing: 1px;
+        }
+
+        .dev-socials {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .dev-icon {
+            color: #555;
+            font-size: 1.2rem;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .dev-icon:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px) rotate(360deg);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .icon-linkedin:hover {
+            color: #0077b5;
+            box-shadow: 0 0 15px rgba(0, 119, 181, 0.5);
+        }
+
+        .icon-insta:hover {
+            color: #e1306c;
+            box-shadow: 0 0 15px rgba(225, 48, 108, 0.5);
+        }
+
+        .icon-mail:hover {
+            color: #ea4335;
+            box-shadow: 0 0 15px rgba(234, 67, 53, 0.5);
+        }
     </style>
 
     <!-- Background -->
@@ -2327,8 +2409,18 @@
 
             <div style="margin-top:30px; font-size:0.8rem; color:#333;">&copy; HONEKEN 2026. Department of ECE.
             </div>
-            <div style="margin-top:10px; font-size:0.75rem; color:#333; opacity:0.6;">
-                Designed & Developed by Rakesh Kumar M M
+
+            <div class="dev-credit-container">
+                <span class="dev-label">Designed & Developed By</span>
+                <div class="dev-name">Rakesh Kumar M M</div>
+                <div class="dev-socials">
+                    <a href="mailto:mmrakeshkumar13@gmail.com" class="dev-icon icon-mail" title="Mail Me"><i
+                            class="fa-solid fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/rakesh-kumar-m-m-694634346/" class="dev-icon icon-linkedin"
+                        title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/rxkeshhhhh/" class="dev-icon icon-insta" title="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </div>
             </div>
         </div>
     </footer>
